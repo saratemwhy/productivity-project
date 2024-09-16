@@ -1,0 +1,9 @@
+
+    <div *ngIf="tasks.length > 0">
+        <ul class="list-group w-50 ps-5 pt-3" *ngFor="let task of tasks; index as i">
+            <li class="list-group-item" [class.checked]="task.completed">
+            <input id="checkbox" class="form-check-input border border-success " type="checkbox" (click)="toggleCompleted(task)"> {{ task.taskName }}
+            </li> 
+        </ul>
+    </div>
+

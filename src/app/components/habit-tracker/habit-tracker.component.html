@@ -1,0 +1,52 @@
+
+<div class="d-flex ">
+    <div class="container-fluid" style="width: 50%; margin-left: 20px;">
+
+        <h2 class="m-5 text-light">My Habits</h2>
+        
+        <form>
+                <div class="input-group mb-3 ps-5" style="width: 650px;">
+                    <input type="text" class="form-control" placeholder="Add habit" [(ngModel)]="newHabit" name="newHabit">
+                    <button class="btn btn-outline-secondary text-light" type="submit" id="button-addon2" (click)="addHabit()">+</button>
+                </div>
+            
+        </form>
+    
+        <div *ngIf="habits.length > 0">
+            <div [id]="'div'+habit.id" class="card ms-5" style="width: 90%; padding: 10px; margin: 10px;" *ngFor="let habit of habits">
+                <div class="d-flex justify-content-between">
+                    <div >
+                        <ul class="list-group list-group-flush" >
+                            <li class="list-group-item">{{habit.habitName}}</li>
+                        </ul>
+                    </div>
+                    <div class="btn-group d-flex" role="group" >
+                        <ng-container *ngFor="let day of arrayDay; let i=index">
+                            <button [id]="'buttonDay'+habit.id+i" type="button" checked class="btn btn-outline-success day" (click)="habitDone(day,habit.id, i)">{{day}}</button>
+                        </ng-container>
+                        <div class="d-flex text-center pt-2" style="margin-left: 23px;" *ngIf="this.checked">
+                            <p [id]="'counterDay'+habit.id">0</p>
+                            <p>/7</p>
+                        </div>
+                    </div>  
+                </div>    
+            </div>
+            
+        </div>
+       
+    </div>
+    
+    <div style="width: 50%;margin-top: 9.5%; margin-left: 50px;">
+        <div>
+            <h6 class="text-light" style="margin-bottom: 30px;">Click to add</h6>
+        </div>
+        <div class="card m-2" style="width: 18rem;" *ngFor="let h of habitsArray">
+            <div class="card-body p-2">
+                <a class="stretched-link" style="text-decoration: none;cursor: pointer;color: black;" (click)="addPreHabit(h)">
+                    <p class="card-text">{{h}}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</div>

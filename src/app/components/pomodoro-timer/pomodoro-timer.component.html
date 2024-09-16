@@ -1,0 +1,53 @@
+<div class="container-fluid">
+
+    <div class="card mx-auto" style="width: 30%;align-items: center; margin-top: 4%;">
+        <div class="card-body" style="margin: 10%;">
+            <h5 class="card-title text-center" style="margin-bottom: 30px;">Keep Focus</h5>
+            <div class="d-flex justify-content-center">
+                <div class="align-self-center">
+                    <button type="button" class="btn btn-outline-dark m-4" (click)="reduceTime()">-</button>
+                </div>
+                <div class="d-flex align-self-center" style="font-size: 2em; padding: 60px;">
+                    <span id="minutesDiv">{{workMinutes}}</span> : <span id="secondsDiv">{{workSeconds|number:'2.0'}}</span> 
+                </div>
+                <div class="align-self-center">
+                    <button type="button" class="btn btn-outline-dark m-4" (click)="increaseTime()">+</button>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between" style="margin-top: 40px;">
+                <div>
+                    <button type="button" id="startButton" class="btn btn-outline-success" (click)="getStart()">Start ▶️</button>
+                </div>
+                <div id="pauseButton">
+                    <button type="button" class="btn btn-outline-warning"  (click)="getPause()">Pause ⏯️</button>
+                </div>
+                <div style="display: none;" id="resumeButton">
+                    <button type="button" class="btn btn-outline-warning"  (click)="getResume()">Riprendi ⏯️</button>
+                </div>
+                <div>
+                    <button type="button" id="stopButton" class="btn btn-outline-danger" (click)="getStop()">Stop ⏹️</button>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center" style="margin-top: 40px;">
+                <div>
+                    <button type="button" class="btn btn-outline-light" disabled style="border-radius: 50%;">🍅</button>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-outline-light" disabled style="border-radius: 50%;">🍅</button>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-outline-light" disabled style="border-radius: 50%;">🍅</button>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-outline-light" disabled style="border-radius: 50%;">🍅</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+</div>

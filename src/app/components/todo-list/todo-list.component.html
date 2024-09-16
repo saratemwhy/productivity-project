@@ -1,0 +1,28 @@
+
+<div class="container container-fluid">
+    <h2 class="m-5 text-light">Todo List</h2>
+
+    <div class="d-flex">
+        <div class="ms-5">
+            <mat-card class="demo-inline-calendar-card">
+                <mat-calendar [(selected)]="selected"></mat-calendar>
+            </mat-card>
+            <p class="text-light">Selected date: {{selected() | date: 'dd/MM/yyyy'}}</p>
+        </div>
+        
+        <div class="d-flex flex-column bd-highlight mb-3 w-75">
+
+            <form>
+                <div class="input-group mb-3 w-50 ps-5">
+                    <input type="text" class="form-control" placeholder="Add activities" [(ngModel)]="newTask" name="newTask">
+                    <button class="btn btn-outline-secondary text-light" type="submit" id="button-addon2" (click)="addToList()">+</button>
+                </div>
+            </form>
+
+            <app-todo-item [tasks]="tasks"></app-todo-item>
+            
+        </div>
+
+    </div>
+</div>
+
