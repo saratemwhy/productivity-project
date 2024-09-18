@@ -1,27 +1,28 @@
-# ProductivityProject
+# Productivity Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
 
-## Development server
+## Get started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Install npm packages
 
-## Code scaffolding
+Install the `npm packages` described in the package.json and verify that it works:
+```
+npm install
+npm start
+```
+### Development server
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng serve` for a dev server. Navigate to http://localhost:4200/. The application will automatically reload if you change any of the source files.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
+### Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Project Description
+This project is an Angular application designed to enhance productivity, developed using **Angular**, **TypeScript**, and **Bootstrap**. It features a Habit Tracker, Pomodoro Timer, and To-Do List, providing users with comprehensive tools to manage their time and tasks effectively.
+
+## Features
+* Habit Tracker: Allows users to set and track their habits over time, helping them build positive routines and monitor their progress.
+* Pomodoro Timer: A timer that implements the Pomodoro Technique, enabling users to work in focused intervals followed by short breaks to boost productivity.
+* To-Do List: A simple yet effective task management system where users can add, edit, and delete tasks, ensuring they stay organized and on top of their responsibilities.
